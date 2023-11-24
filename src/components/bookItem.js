@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-
+import { Link } from 'react-router-dom'; //allows you to change the link
 function BookItem(props) {
 
     return (
@@ -16,6 +16,8 @@ function BookItem(props) {
                         </footer>
                     </blockquote>
                 </Card.Body>
+                <Link to={'/edit/'+props.myBook._id}>Edit</Link> 
+                {/* unique identifier for each book, url will change */}
             </Card>
             {/* <h3>{props.myBook.title}</h3>
             <img src={props.myBook.thumbnailUrl}></img>
